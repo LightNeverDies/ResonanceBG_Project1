@@ -1,3 +1,3 @@
 <?php
-    echo "<p>Testsxx</p>";
+    echo "<p>Test</p>";
 ?>
