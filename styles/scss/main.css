@@ -379,8 +379,8 @@ header nav, header nav ul, header nav ul li {
 
 header nav ul {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   list-style: none;
   padding: 0;
   width: 100%;
