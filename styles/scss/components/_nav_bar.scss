@@ -17,8 +17,8 @@
       justify-content:center;
       align-items: center;
 
-      &:not(last-child){
-        border-right: 1px solid 
+      &:not(first-child){
+        border-right: 2px solid 
       }
     }
     .nav-btn-txt{
@@ -31,7 +31,7 @@
 @media screen and(min-width:601px)
 {
     .nav-btn-txt{
-        font-size:30pt;
+        font-size:20pt;
     }
 }
 @media screen and(max-width:600px)

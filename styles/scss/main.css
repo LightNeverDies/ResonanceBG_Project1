@@ -401,15 +401,16 @@ header {
   -ms-grid-rows: 1fr auto 1fr;
       grid-template-rows: 1fr auto 1fr;
   background-color: #1A77BA;
-  border: 2px solid green;
+  padding: 20px 10px 0 10px;
+  border: 1.5px solid red;
 }
 
 header .header-top {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 2fr;
-      grid-template-columns: auto 2fr;
-  border: 2px solid yellow;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  border: 2px solid yellowgreen;
 }
 
 header .header-bottom {
@@ -417,7 +418,7 @@ header .header-bottom {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  border: 2px solid yellow;
+  border: 2px solid yellowgreen;
 }
 
 /*Components*/
@@ -425,6 +426,30 @@ header .header-bottom {
   width: 69px;
   height: 59px;
   border: 2px solid violet;
+}
+
+.lang-bar-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid white;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lang-bar-wrapper .lang-bar {
+  border: 2px solid red;
+}
+
+.lang-bar-wrapper .lang-bar .planet {
+  fill: white;
+}
+
+.lang-bar-wrapper .lang-bar .arrow-down {
+  color: white;
+  text-align: center;
 }
 
 .nav-bar-wrapper {
@@ -454,8 +479,8 @@ header .header-bottom {
           align-items: center;
 }
 
-.nav-bar .nav-btn:not(last-child) {
-  border-right: 1px solid;
+.nav-bar .nav-btn:not(first-child) {
+  border-right: 2px solid;
 }
 
 .nav-bar .nav-btn-txt {
@@ -464,7 +489,7 @@ header .header-bottom {
 
 @media screen and (min-width: 601px) {
   .nav-btn-txt {
-    font-size: 30pt;
+    font-size: 20pt;
   }
 }
 

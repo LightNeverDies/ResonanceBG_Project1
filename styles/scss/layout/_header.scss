@@ -2,20 +2,20 @@ header{
     display:grid;
     grid-template-rows: 1fr auto 1fr;
     background-color: $headerColor;  
-
-    border: 2px solid green;
+    padding: 20px 10px 0 10px;
+    border: 1.5px solid red;
 
     .header-top{
         display:grid;
-        grid-template-columns: auto 2fr;
+        grid-template-columns: auto 1fr auto;
 
-        border: 2px solid yellow;
+        border: 2px solid yellowgreen;
     }
 
     .header-bottom{
         display:grid;
         grid-template-columns: 1fr 1fr;
 
-        border: 2px solid yellow;
+        border: 2px solid yellowgreen;
     }
 }

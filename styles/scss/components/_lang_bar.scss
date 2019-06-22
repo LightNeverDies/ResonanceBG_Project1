@@ -1,0 +1,21 @@
+.lang-bar-wrapper{
+    display:flex;
+    border: 2px solid white;
+    height: 100%;
+    align-items:center;
+    
+    .lang-bar{
+        border: 2px solid red;
+        
+        .planet{
+            
+            fill:white;
+  
+        }
+        .arrow-down{
+            color:white;
+            text-align: center;
+        }
+    }
+ 
+}
