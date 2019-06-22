@@ -1,11 +1,10 @@
 header{
     display:grid;
     grid-template-columns: auto 50%;
-    justify-content: center;
+    justify-content:center;
     align-content: center;
     background-color: $headerColor;  
-    justify-content: center;
-    height: 60px;
+    height:60px;
     border: 2px solid green;
     
     .logo{

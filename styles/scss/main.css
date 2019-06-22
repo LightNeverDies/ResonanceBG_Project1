@@ -356,7 +356,6 @@ header {
   -ms-flex-line-pack: center;
       align-content: center;
   background-color: #97c8ef;
-  justify-content: center;
   height: 60px;
   border: 2px solid green;
 }
@@ -379,8 +378,8 @@ header nav, header nav ul, header nav ul li {
 
 header nav ul {
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style: none;
   padding: 0;
   width: 100%;
@@ -398,7 +397,7 @@ header nav ul li {
       -ms-grid-row-align: center;
       align-self: center;
   font-size: 12pt;
-  color: #FFFFFF;
+  color: #FFFF;
 }
 
 /*Pages*/
