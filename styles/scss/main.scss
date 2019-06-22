@@ -13,9 +13,11 @@
 @import "layout/_footer";
 
 /*Components*/
-@import "components/_nav_buttons";
-@import "components/_social_buttons";
+@import "components/_logo";
+@import "components/_langbar_dropdown";
+@import "components/nav_bar";
 @import "components/_plans";
+@import "components/_social_buttons";
 
 /*Pages*/
 @import "pages/_about";

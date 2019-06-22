@@ -1,0 +1,42 @@
+.nav-bar-wrapper{
+    border:2px solid violet;
+    height: 40px;
+
+    &, & .nav-bar, & .nav-bar .nav-btn{
+        display: flex;
+    }
+}
+
+.nav-bar{
+    list-style: none;
+    border: 2px solid red;
+    width: 100%;
+
+    .nav-btn{
+      width: 100%;
+      justify-content:center;
+      align-items: center;
+
+      &:not(last-child){
+        border-right: 1px solid 
+      }
+    }
+    .nav-btn-txt{
+        //font-size:0.85em;
+        color: $navButtonsColor;
+    }
+}
+
+
+@media screen and(min-width:601px)
+{
+    .nav-btn-txt{
+        font-size:30pt;
+    }
+}
+@media screen and(max-width:600px)
+{
+    .nav-btn-txt{
+        font-size:10pt;
+    }
+}
