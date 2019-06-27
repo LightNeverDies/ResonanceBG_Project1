@@ -1,12 +1,14 @@
 .lang-bar-wrapper{
+ 
     display:flex;
-    border: 2px solid white;
+    border: 2px solid violet;
     height: 100%;
     align-items:center;
-    
+
     .lang-bar{
         border: 2px solid red;
-        
+        width: 100%;
+
         .planet{
             
             fill:white;
@@ -17,5 +19,4 @@
             text-align: center;
         }
     }
- 
 }

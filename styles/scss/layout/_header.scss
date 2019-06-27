@@ -7,9 +7,12 @@ header{
 
     .header-top{
         display:grid;
-        grid-template-columns: auto 1fr auto;
+        grid-template-columns: auto 2fr auto;
+        border: 2px solid red;
 
-        border: 2px solid yellowgreen;
+        .header-top-mid{
+            border: 2px solid violet;
+        }
     }
 
     .header-bottom{

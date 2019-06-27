@@ -2,29 +2,36 @@
     border:2px solid violet;
     height: 40px;
 
-    &, & .nav-bar, & .nav-bar .nav-btn{
+    &, & .nav-bar, & .nav-bar .nav-btn, & .nav-bar .nav-btn .nav-btn-txt{
         display: flex;
+    }
+
+    .nav-bar{
+        list-style: none;
+        border: 2px solid blue;
+        width: 100%;
+    
+        .nav-btn{
+          width: 100%;
+        
+            &:not(:last-child){
+                border-right: 2px solid yellow;
+            }
+        }
+        .nav-btn-txt{
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items:center;
+            color: $navButtonsColor;
+        }
     }
 }
 
-.nav-bar{
-    list-style: none;
-    border: 2px solid red;
-    width: 100%;
 
-    .nav-btn{
-      width: 100%;
-      justify-content:center;
-      align-items: center;
-
-      &:not(first-child){
-        border-right: 2px solid 
-      }
-    }
-    .nav-btn-txt{
-        //font-size:0.85em;
-        color: $navButtonsColor;
-    }
+.nav-btn:hover
+{
+    background: #e91e63;
 }
 
 
@@ -39,4 +46,43 @@
     .nav-btn-txt{
         font-size:10pt;
     }
+}
+
+
+label{
+    font-size: 26px;
+    display:none;
+    float:right;
+}
+#toggle
+{
+    display:none;
+}
+
+@media only screen and (max-width:600px)
+{
+    label{
+        display:block;
+        cursor:pointer;
+    }
+    .nav-bar-wrapper
+    {
+        text-align: center;
+        display:none;
+        margin:0;
+        
+      
+    }
+    
+    .nav-bar a
+    {
+        display: block;
+        border-bottom:  1px solid orange;
+    }
+    #toggle:checked + .nav-bar-wrapper
+    {
+        display: block;
+     
+    }
+    
 }
