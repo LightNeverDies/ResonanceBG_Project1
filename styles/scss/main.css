@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Helpers - Abstracts*/
 /*Base*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -408,8 +409,8 @@ header {
 header .header-top {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 2fr auto;
-      grid-template-columns: auto 2fr auto;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
   border: 2px solid red;
 }
 
@@ -425,6 +426,14 @@ header .header-bottom {
   border: 2px solid yellowgreen;
 }
 
+body {
+  background: gray;
+}
+
+p {
+  color: white;
+}
+
 /*Components*/
 .logo {
   width: 69px;
@@ -436,25 +445,69 @@ header .header-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 2px solid violet;
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 2px solid violet;
 }
 
 .lang-bar-wrapper .lang-bar {
-  border: 2px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 100%;
+  border: 2px solid red;
 }
 
-.lang-bar-wrapper .lang-bar .planet {
-  fill: white;
-}
-
-.lang-bar-wrapper .lang-bar .arrow-down {
+.lang-bar-wrapper .lang-bar .lang-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1em;
   color: white;
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid red;
+}
+
+.lang-bar-wrapper .lang-bar .lang-name:before {
+  font-size: 1.4em;
+  content: "     ";
+  white-space: pre;
+  background: url(../../../images/icons/earth.svg) no-repeat;
+  background-size: 100% 100%;
+  border: 1px solid yellow;
+}
+
+.lang-bar-wrapper .lang-bar .lang-name:after {
+  font-size: 0.8em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 1px solid red;
+}
+
+.lang-bar-wrapper .lang-bar[is-selector-active="true"] .lang-name::after {
+  content: '⯅';
+}
+
+.lang-bar-wrapper .lang-bar[is-selector-active="false"] .lang-name::after {
+  content: '⯆';
+}
+
+.lang-bar:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .lang-bar {
+    font-size: 2em;
+  }
 }
 
 .nav-bar-wrapper {
@@ -476,10 +529,11 @@ header .header-bottom {
 
 .nav-bar-wrapper .nav-bar .nav-btn {
   width: 100%;
+  border-top: 2px solid yellow;
 }
 
 .nav-bar-wrapper .nav-bar .nav-btn:not(:last-child) {
-  border-right: 2px solid yellow;
+  border-right: 2px solid black;
 }
 
 .nav-bar-wrapper .nav-bar .nav-btn-txt {
@@ -494,48 +548,9 @@ header .header-bottom {
   color: #FFFFFF;
 }
 
-.nav-btn:hover {
-  background: #e91e63;
-}
-
 @media screen and (min-width: 601px) {
   .nav-btn-txt {
-    font-size: 20pt;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .nav-btn-txt {
-    font-size: 10pt;
-  }
-}
-
-label {
-  font-size: 26px;
-  display: none;
-  float: right;
-}
-
-#toggle {
-  display: none;
-}
-
-@media only screen and (max-width: 600px) {
-  label {
-    display: block;
-    cursor: pointer;
-  }
-  .nav-bar-wrapper {
-    text-align: center;
-    display: none;
-    margin: 0;
-  }
-  .nav-bar a {
-    display: block;
-    border-bottom: 1px solid orange;
-  }
-  #toggle:checked + .nav-bar-wrapper {
-    display: block;
+    font-size: 16pt;
   }
 }
 
