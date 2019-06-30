@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+
     $(".lang-bar").click(function(){
         if(!$(this).hasClass('open')){
             $(this).attr('is-selector-active', 'true');
@@ -9,3 +10,10 @@ $( document ).ready(function() {
         }
     }) 
 });
+
+function loadLanguages(){
+
+}
+function languageTray(){
+
+}
