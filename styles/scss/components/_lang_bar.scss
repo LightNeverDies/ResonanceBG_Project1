@@ -1,0 +1,60 @@
+.lang-bar-wrapper{
+    display:flex;
+    height: 100%;
+    align-items:center;
+    border: 2px solid violet;
+    
+    .lang-bar{
+        display:flex;
+        align-items:flex-end;
+        width: 100%;
+        border: 2px solid red;
+
+        .lang-name{
+            display:flex;
+            font-size: 1em;
+            color:white;
+            align-items:center;
+            border: 1px solid red;
+
+            &:before{
+                font-size: 1.4em;
+                content: "     ";
+                white-space: pre;
+                background: url(../../../images/icons/earth.svg) no-repeat;
+                background-size: 100% 100%;
+                border: 1px solid yellow;
+            }
+
+            &:after{
+                font-size: 0.8em;
+                align-self: center;
+                border: 1px solid red;   
+            }
+        }
+        
+        &[is-selector-active="true"]{
+            .lang-name::after{
+                content:'⯅';
+            }
+        }
+
+        &[is-selector-active="false"]{
+            .lang-name::after{
+                content:'⯆';
+            }
+        }
+    }
+}
+
+.lang-bar:hover{
+    cursor: pointer;
+}
+
+@media only screen and(max-width:600px)
+{
+    .lang-bar
+    {
+        font-size: 2em;
+    }
+}
