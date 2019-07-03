@@ -9,10 +9,6 @@ header{
         display:grid;
         grid-template-columns: auto 1fr auto;
         border: 2px solid red;
- 
-        .header-top-mid{
-            border: 2px solid violet;
-        }
     }
 
     .header-bottom{

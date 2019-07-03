@@ -11,15 +11,17 @@
     <body>
        <div class="main-wrapper">
             <header>
-                <!--Include Header and Navigation-->
-               <?php include("header.php") ?>
+                <!--Include header and site navigation-->
+                <?php include("includes/header.php")?>
             </header>
             <main>
             </main>
             <footer>
-
+                <!--Include footer and additional info-->
+                <?php include("includes/footer.php")?>
             </footer>
        </div>
-       <script src="scripts/lang-bar.js"></script>
+       <script src="scripts/lang_tray.js"></script>
+       <script src="scripts/nav_tray.js"></script>
     </body>
 </html>

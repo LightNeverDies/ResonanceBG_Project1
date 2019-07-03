@@ -14,11 +14,12 @@
 
 /*Components*/
 @import "components/_logo";
-@import "components/_lang_bar";
+@import "components/_util_nav_right";
+@import "components/_account_tray";
+@import "components/_shopping_cart";
+@import "components/_lang_tray";
 @import "components/_lang_bar_dropdown";
 @import "components/_nav_bar";
-@import "components/_plans";
-@import "components/_social_buttons";
 
 /*Pages*/
 @import "pages/_about";

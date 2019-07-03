@@ -1,28 +1,23 @@
-.lang-bar-wrapper{
+.lang-tray{
     display:flex;
+    justify-content: center;
     align-items:center;
-    border: 2px solid violet;
+    border: 2px solid red;
+    padding: 0px;
     
-    .lang-bar{
+    .code2{
         display:flex;
-        align-items:flex-end;
-        width: 100%;
-        border: 2px solid red;
+        font-size: 1em;
+        color:white;
+        align-items:center;
+        border: 1px solid red;
 
-        .code2{
-            display:flex;
-            font-size: 1em;
-            color:white;
-            align-items:center;
-            border: 1px solid red;
-
-            &:before{
-                font-size: 1.4em;
-                content: "     ";
+        &:before{
+                font-size: 1.5em;
+                content: "    ";
                 white-space: pre;
                 background: url(../../../images/icons/earth.svg) no-repeat;
                 background-size: 100% 100%;
-                border: 1px solid yellow;
             }
 
             &:after{
@@ -41,18 +36,17 @@
         &.lang-dropdown[is-dropdown-active="false"]{
             .code2::after{
                 content:'⯆';
-            }
         }
     }
 }
 
-.lang-bar span:hover{
+.lang-tray span:hover{
     cursor: pointer;
 }
 
 @media only screen and(max-width:600px)
 {
-    .lang-bar
+    .lang-tray
     {
         font-size: 2em;
     }
