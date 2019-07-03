@@ -116,8 +116,9 @@ label{
       #toggle:checked + .hamb::before
       {
          content: "\2716";
-         position: absolute;
+         position: relative;
          color:white;
+         margin:0;
       }
 
 
