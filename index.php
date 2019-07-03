@@ -15,6 +15,7 @@
                 <?php include("includes/header.php")?>
             </header>
             <main>
+               
             </main>
             <footer>
                 <!--Include footer and additional info-->
