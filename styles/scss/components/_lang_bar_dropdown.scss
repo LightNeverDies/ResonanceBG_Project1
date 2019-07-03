@@ -1,0 +1,28 @@
+.lang-dropdown{
+    position: absolute;
+    background-color: white;
+    right: 10px; //Insert Variable Later
+    top: 88px;
+    z-index: 1024;  
+    
+    & li[code2]{ 
+        padding: 8px 12px 8px 12px;
+
+        &:hover{
+            background-color: aqua;
+        }
+    }
+
+    & li[is-selected="true"]{
+        background-color: blue;
+    }
+
+    &[is-dropdown-active="true"]{
+        visibility: visible;
+    }
+
+    &[is-dropdown-active="false"]{
+        visibility: hidden;
+    }
+}
+ 

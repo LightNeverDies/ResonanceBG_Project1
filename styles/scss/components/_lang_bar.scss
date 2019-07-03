@@ -1,6 +1,5 @@
 .lang-bar-wrapper{
     display:flex;
-    height: 100%;
     align-items:center;
     border: 2px solid violet;
     
@@ -10,7 +9,7 @@
         width: 100%;
         border: 2px solid red;
 
-        .lang-name{
+        .code2{
             display:flex;
             font-size: 1em;
             color:white;
@@ -32,22 +31,22 @@
                 border: 1px solid red;   
             }
         }
-        
-        &[is-selector-active="true"]{
-            .lang-name::after{
+
+        &.lang-dropdown[is-dropdown-active="true"]{
+            .code2::after{
                 content:'⯅';
             }
         }
-
-        &[is-selector-active="false"]{
-            .lang-name::after{
+        
+        &.lang-dropdown[is-dropdown-active="false"]{
+            .code2::after{
                 content:'⯆';
             }
         }
     }
 }
 
-.lang-bar:hover{
+.lang-bar span:hover{
     cursor: pointer;
 }
 
