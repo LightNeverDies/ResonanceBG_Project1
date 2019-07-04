@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="header-bottom">
-        <nav class="nav-bar-wrapper">
+        <nav class="nav-bar-wrapper" is-toggled="false">
             <span class="mobile-nav-btn">&#9776;</span> 
             <ul class="nav-bar" is-active="false">
                 <li class="nav-btn home-btn"><a href="index.php" class="nav-btn-txt home-btn-txt">Home</a></li>
