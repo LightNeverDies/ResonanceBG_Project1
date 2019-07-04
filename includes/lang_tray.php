@@ -15,7 +15,8 @@ $fetchAll = 'SELECT
                 language_name_native 
                 FROM  country 
                 LEFT JOIN LANGUAGE 
-                ON countryID = languageID;';
+                ON countryID = languageID
+                ORDER BY language_name;';
 
 $result = $dbc->query($fetchAll);
 
@@ -26,7 +27,7 @@ foreach($countries as $country){
     $state = $country["country_name"];
     $code2 = $country["alpha_code2"];
     $native_language = $country["language_name_native"];
-
-    echo "<li code2={$code2}>" . '<a href="#"><b>' . $state . '</b> - '. $native_language .'</a></li>';
+    
+    echo "<li code2={$code2}>" . '<a href="#">' . $native_language .'</a></li>';
 }
 ?>

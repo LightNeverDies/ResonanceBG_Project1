@@ -1,5 +1,7 @@
 $( document ).ready(function() {
     $isDropdownActive = false;
+    $langBar = $('.lang-bar');
+    $langCode2 = $('.code2');
     $dropDownElement = $('.lang-dropdown');
     $languageList = $("li[code2]");
     $selectedLangElement = null;
@@ -9,23 +11,26 @@ $( document ).ready(function() {
     });
 
     $(document).mouseup(function (e){
-        if(!$(".lang-tray span").is(e.target)){
+        if(!$(".lang-bar span").is(e.target)){
             setDropdownActivity(false);
         }
     });
 
-    $(".lang-tray span").click(function(){
+    $(".lang-bar span").click(function(){
         setDropdownActivity($isDropdownActive = !$isDropdownActive)
     }) 
 });
 
 function onLanguageSelect($targetLanguage){
-    $targetLanguage.insertBefore($languageList[0]);
-    $languageList[0] = $targetLanguage;
-    $('.code2').html($targetLanguage.attr('code2'));
+    $langCode2.attr({
+        'title': $targetLanguage.children().html(),
+        'target-lang': $targetLanguage.attr('code2')
+    });
+
+    $langCode2.html($($targetLanguage).attr('code2'));
 }
 
 function setDropdownActivity($isActive){
     $isDropdownActive = $isActive;
-    $dropDownElement.attr('is-dropdown-active', $isActive.toString());
+    $langBar.attr('is-dropdown-active', $isActive.toString());
 }

@@ -1,4 +1,5 @@
 .lang-dropdown{
+    display: block;
     position: absolute;
     background-color: white;
     right: 10px; //Insert Variable Later
@@ -7,23 +8,12 @@
     
     & li[code2]{ 
         padding: 8px 12px 8px 12px;
-
+        text-align: center;
+   
         &:hover{
             background-color: aqua;
             cursor: pointer;
         }
-    }
-
-    & li[is-selected="true"]{
-        background-color: blue;
-    }
-
-    &[is-dropdown-active="true"]{
-        visibility: visible;
-    }
-
-    &[is-dropdown-active="false"]{
-        visibility: hidden;
     }
 }
  

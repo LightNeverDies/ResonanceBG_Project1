@@ -48,6 +48,8 @@
     .mobile-nav-btn{
         display: none;
     }
+    
+ 
 }
 
 @media screen and(max-width:600px)
@@ -57,35 +59,13 @@
     }
 
     .nav-bar[is-active="true"]{
-        display: flex !important;
+        display: flex;
         flex-wrap: wrap;
+        $rez: 231px;
     }
 
     .nav-bar[is-active="false"]{
-        display: none !important;
+        display: none;
+        $rez: 131px;
     }
 }
-
-
-
-/*#side_menu
-{
-    position: sticky;
-}
-
-#side_menu  #toggle{
-    font-size: 26px;
-    display:none;
-    float:right;
-}
-
-label{
-    display:none;
-}
-
-#side_menu ul li{
-    display:block;
-    padding: 10px;
-    box-sizing: border-box;
-}*/
-

@@ -1,6 +1,5 @@
 .main-wrapper{
     display:grid;
-    height: 1400px;
     grid-template-columns: 100%;
-    grid-template-rows: auto 4fr 220px;
+    grid-template-rows: auto calc(100vh - 170px) 220px;
 }
