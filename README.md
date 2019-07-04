@@ -1,1 +1,1 @@
-Website for Renting Virtual Machines
+Website for Virtual Machines Rental
