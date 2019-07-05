@@ -3,7 +3,7 @@ $( document ).ready(function() {
     $navBarWrapper = $('.nav-bar-wrapper');
     $navBar = $('.nav-bar');
     $mobileNavBtn = $('.mobile-nav-btn');
-
+    
     $($mobileNavBtn).click(function(){
         setNavTrayActivity($isNavTrayActive = !$isNavTrayActive)
     });

@@ -1,74 +1,15 @@
-<?php require_once("includes/main/config.php") ?>
-<!DOCTYPE html>
-<html lang="en"> 
-    <head>
-       <?php require_once("includes/main/head-contents.php"); ?>
-    </head>
+<?php
+    require_once 'C:/xampp/htdocs/ResonanceBG_Project1'.'/vendor/autoload.php';
+ 
+
+    $loader = new Twig_Loader_Filesystem('C:/xampp/htdocs/ResonanceBG_Project1'.'/templates/pages');
+    $twig = new Twig_Environment($loader, array(
+        // Uncomment the line below to cache compiled templates
+        // 'cache' => __DIR__.'/../cache',
+    ));
+
     
-    <body>
-        <?php require_once("includes/layout/header.php"); ?>
-        
-        <main>
-        <!--SignUp Form-->
-        <div class="signup-box">
-            <div class="left-box">
-                <h3>Already have an account?</h3>
-                <button class="signIn"> <a href="signin">Sign In</a> </button>
-                
-            <div class="box">
-                <h1>Create an account</h1>
-                <form method="Post" >
-                    <input type="text" name="username" placeholder="Username" required>
-                    <input type="email" name="e_address" placeholder="Email Address" required>
-                    <input type="password" id="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-                    <input type="password" id="confirm_password" name="retypepassword" placeholder="Retype Password" required>
-                    <input type="submit" name="signup-button" value="Sign Up">
-                    <label class="fgp" href="#">Forgot Password?<label>
-                </form>
-            </div>
-            </div>
-            <div class="right-box">
-                <span class="signinwith"></span>
-                <button class="social facebook"> Log in with Facebook </button>
-                <button class="social twitter"> Log in with Twitter </button>
-                <button class="social google"> Log in with Google + </button>
-            </div>
-            <div class="or">OR</div>
-        </div>
-        <!--End Form-->
-
-        <!--Sign In Form-->
-        <div class="signin-box">
-            <div class="center-box">
-                <form method="Post">
-                    <input type="email" placeholder="email">
-                    <input type="password" placeholder="password">
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                    <input type="submit" name="signin" value="Sign In">             
-                </form>
-                <div class="bottom-box">
-                </div>  
-            <div>
-        </div>
-        <!--End Form-->
-
-        <!--Forgot Password in Form-->
-        <div class="forgot_password">
-            <div class="left-box">
-                <form method="Post">
-                <input type="email" name="e_address" placeholder="Email Address">
-                <input type="password" id="password" name="password" placeholder="Password">
-                </form>
-            </div>
-        </div>
-        <!--End Form-->
-        </main>
-
-        <?php require_once("includes/layout/footer.php"); ?>
-        <?php require_once("includes/main/scripts.php");?>
-
-        <script src="scripts/schange_form.js"></script>
-        <script src="scripts/check_password.js"></script>
-    </body>
-</html>
-
+    echo $twig->render("sign.html.twig", array(
+        'info' => 'Already have an account?'
+    ));
+?>

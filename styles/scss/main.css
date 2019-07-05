@@ -706,7 +706,7 @@ footer {
   }
 }
 
-.main-wrapper {
+.main-wrapper-index {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100%;

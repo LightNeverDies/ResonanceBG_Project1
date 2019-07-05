@@ -1,24 +1,16 @@
-<?php require_once("includes/main/config.php") ?>
+<?php
+    require_once 'C:/xampp/htdocs/ResonanceBG_Project1'.'/vendor/autoload.php';
+ 
 
-<!DOCTYPE html>
-<html> 
-    <head>
-       <?php require_once("includes/main/head-contents.php"); ?>
-    </head>
+    $loader = new Twig_Loader_Filesystem('C:/xampp/htdocs/ResonanceBG_Project1'.'/templates/pages');
+    $twig = new Twig_Environment($loader, array(
+        // Uncomment the line below to cache compiled templates
+        // 'cache' => __DIR__.'/../cache',
+    ));
+
     
-    <body>
-       <div class="main-wrapper">
-            <!--Header Contents-->
-            <?php require_once("includes/layout/header.php");?>
+    echo $twig->render("index.html.twig", array());
+ 
+   
 
-            <main>
-               
-            </main>
-        
-            <!--Footer Contents-->
-            <?php require_once("includes/layout/footer.php");?>
-            <!--Scripts-->
-            <?php require_once("includes/main/scripts.php");?>
-       </div>
-    </body>
-</html>
+    
