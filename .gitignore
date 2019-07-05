@@ -1,8 +1,8 @@
 .sass-cache/
 *.css.map
 
-.vscode/*
-.vscode/settings.json
+!.vscode/*
+!.vscode/settings.json
 !.vscode/extensions.json
 
 

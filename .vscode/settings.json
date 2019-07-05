@@ -1,0 +1,14 @@
+{
+    "liveServer.settings.port":5501,
+    "php.validate.executablePath":"D:\\php\\php.exe",
+    "php.executablePath":"D:\\php\\php.exe",
+    "php.validate.run": "onType",
+
+    "liveServer.settings.proxy": {
+        "enable": true,
+        "baseUri": "/",
+        "proxyUri": "http://localhost:8088/ResonanceBG_Project1/"
+    },
+
+
+}
